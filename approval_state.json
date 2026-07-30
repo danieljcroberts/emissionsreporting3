@@ -7,12 +7,14 @@
     "djcremissions@gmail.com",
     "djcremissions@gmail.com"
   ],
-  "current_index": 0,
+  "current_index": 1,
   "status": "awaiting_approval",
   "thread_id": "ae419da1-85fe-4e42-aeb2-32562cc2f132",
   "started_at": "2026-07-30T22:20:33Z",
-  "last_checked": "2026-07-30T22:20:33Z",
+  "last_checked": "2026-07-30T22:36:37Z",
   "history": [
-    {"ts": "2026-07-30T22:20:33Z", "event": "request_sent", "approver_index": 0, "to": "djcremissions@gmail.com"}
+    {"ts": "2026-07-30T22:20:33Z", "event": "request_sent", "approver_index": 0, "to": "djcremissions@gmail.com"},
+    {"ts": "2026-07-30T22:29:00Z", "event": "approved", "approver_index": 0, "by": "djcremissions@gmail.com", "reply": "Approved."},
+    {"ts": "2026-07-30T22:36:37Z", "event": "request_sent", "approver_index": 1, "to": "djcremissions@gmail.com"}
   ]
 }
