@@ -4,22 +4,25 @@
   "active": {
     "quarter": "2026-Q1",
     "draft_file": "2026-Q1 DRAFT.csv",
-    "draft_hash": "590c5d89164eef0c0d06bd9722c25836543a665accddaee7cba00ab2e7ec5835",
+    "draft_hash": "c7d98164a9ea4320e9e440ba6ccd8cbd4eb02be96ed7e04bbbd00f21b50ea06b",
     "approvers": [
       "djcremissions@gmail.com",
       "djcremissions@gmail.com",
       "djcremissions@gmail.com"
     ],
-    "current_index": 1,
+    "current_index": 0,
     "status": "awaiting_approval",
     "thread_id": "ae419da1-85fe-4e42-aeb2-32562cc2f132",
     "started_at": "2026-07-30T22:20:33Z",
-    "last_checked": "2026-07-30T22:42:53Z"
+    "last_checked": "2026-07-31T14:39:04Z"
   },
   "completed": {},
   "history": [
     {"ts": "2026-07-30T22:20:33Z", "event": "request_sent", "quarter": "2026-Q1", "approver_index": 0, "to": "djcremissions@gmail.com"},
     {"ts": "2026-07-30T22:29:00Z", "event": "approved", "quarter": "2026-Q1", "approver_index": 0, "by": "djcremissions@gmail.com", "reply": "Approved."},
-    {"ts": "2026-07-30T22:36:37Z", "event": "request_sent", "quarter": "2026-Q1", "approver_index": 1, "to": "djcremissions@gmail.com"}
+    {"ts": "2026-07-30T22:36:37Z", "event": "request_sent", "quarter": "2026-Q1", "approver_index": 1, "to": "djcremissions@gmail.com"},
+    {"ts": "2026-07-31T14:39:04Z", "event": "correction_applied", "quarter": "2026-Q1", "approver_index": 1, "by": "djcremissions@gmail.com", "detail": "Plant A Draft Reports Emissions 508.0414953 -> 99", "reply": "Correction is needed to plant A the emission number should be 99."},
+    {"ts": "2026-07-31T14:39:04Z", "event": "chain_restarted", "quarter": "2026-Q1", "detail": "Corrections applied; chain restarted from Approver 1 of 3"},
+    {"ts": "2026-07-31T14:39:04Z", "event": "request_sent", "quarter": "2026-Q1", "approver_index": 0, "to": "djcremissions@gmail.com"}
   ]
 }
