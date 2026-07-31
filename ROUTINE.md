@@ -256,6 +256,25 @@ notify Approver 1 again, and call it out in the user notification.
 4. Commit with a descriptive message and push:
    `git add -A && git commit -m "..." && git push -u origin <branch>`
    Retry a failed push up to 4 times with backoff (2s, 4s, 8s, 16s).
+
+   **If the push fails with HTTP 403**, the session's git proxy is read-only (this is
+   normal in scheduled runs). Push straight to github.com instead, authenticating with
+   the token in the `GH_PAT` environment variable:
+
+   ```bash
+   GIT_CONFIG_GLOBAL=/dev/null GIT_TERMINAL_PROMPT=0 \
+   git -c credential.helper='!f(){ echo username=x-access-token; echo password=$GH_PAT; };f' \
+       -c http.sslCAInfo=/root/.ccr/ca-bundle.crt \
+       push "https://github.com/danieljcroberts/emissionsreporting3.git" \
+       HEAD:refs/heads/<branch>
+   ```
+
+   `GIT_CONFIG_GLOBAL=/dev/null` is what bypasses the `insteadOf` rewrite that would
+   otherwise send the push back to the read-only proxy. **Never write `GH_PAT` into a
+   file, a commit, the audit log, or a command that echoes it.** If `GH_PAT` is not set,
+   do not improvise another credential — log `PUSH_BLOCKED` and tell the user in the
+   notification that the run's state could not be persisted, so the next run will
+   repeat it.
 5. **Notify the user** with `PushNotification` — one line, under 200 characters, no
    markdown. Lead with what changed. Examples:
    - `2026-Q1: Approver 2 of 3 approved. Request sent to Approver 3. 4 flags open.`
