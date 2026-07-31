@@ -1,6 +1,17 @@
 {
-  "schema": 2,
+  "schema": 3,
+  "runbook": "ROUTINE.md",
   "agent_inbox": "dan-emissions@agentmail.to",
+  "repo": {
+    "full_name": "danieljcroberts/emissionsreporting3",
+    "branch": "claude/emissions-approval-routine-f5jdub"
+  },
+  "schedule": {
+    "trigger_id": "trig_01HeueW3261Uu3nY3Gw9KiXR",
+    "cron_utc": "0 6 * * 1-5",
+    "local": "weekdays 08:00 Europe/Oslo",
+    "dst_note": "Oslo is UTC+2 (CEST) in summer -> 0 6 * * 1-5; UTC+1 (CET) in winter -> 0 7 * * 1-5. See ROUTINE.md section 7."
+  },
   "active": {
     "quarter": "2026-Q1",
     "draft_file": "2026-Q1 DRAFT.csv",
